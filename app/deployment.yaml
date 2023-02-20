@@ -3,27 +3,27 @@ kind: Deployment
 metadata:
   annotations:
   labels:
-    app: app-team-a
+    app: app-team-b
     app.kubernetes.io/component: web
-    app.kubernetes.io/instance: app-team-a
-    app.kubernetes.io/name: app-team-a
-    app.kubernetes.io/part-of: app-team-a
+    app.kubernetes.io/instance: app-team-b
+    app.kubernetes.io/name: app-team-b
+    app.kubernetes.io/part-of: app-team-b
     app.openshift.io/runtime: java
-  name: app-team-a
+  name: app-team-b
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: app-team-a
+      app: app-team-b
   template:
     metadata:
       labels:
-        app: app-team-a
+        app: app-team-b
     spec:
       containers:
-      - name: app-team-a
+      - name: app-team-b
         imagePullPolicy: Always
-        image: quay.io/service-binding/app-team-a:latest
+        image: quay.io/service-binding/app-team-b:latest
         livenessProbe:
           failureThreshold: 3
           httpGet:
