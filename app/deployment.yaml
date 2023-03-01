@@ -23,7 +23,7 @@ spec:
       containers:
       - name: app-team-a
         imagePullPolicy: Always
-        image: quay.io/service-binding/app-team-a:latest
+        image: quay.io/service-binding/spring-petclinic:latest
         livenessProbe:
           failureThreshold: 3
           httpGet:
